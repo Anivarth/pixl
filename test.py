@@ -1,4 +1,4 @@
-from pixl import Pixl
+from pixl import Pixl, FileNotFoundError
 import pytest, glob, random
 import numpy as np
 import matplotlib.pyplot as plt
@@ -50,5 +50,6 @@ def test_image_input():
 def test_image_file_not_found():
 	"""
 	test to raise error if the image file is not found"""
-	with pytest.raises("FileNotFoundError"):
+	with pytest.raises(FileNotFoundError):
 		px = Pixl(image = "ThisFileIsNotThere.png")
+		px.create_workbook()

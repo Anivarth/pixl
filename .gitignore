@@ -3,3 +3,6 @@ venv/
 user_files/
 test_image.png
 .cache/
+test_folder/
+*.pyc
+*.pyx
